@@ -14,9 +14,10 @@ function validateLogin() {
     data: JSON.stringify({ email: email, password: password }),
     success: function (response) {
       if (response.error) {
-        console.log("Error:", response.error);
+        alert("Error:", response.error);
       } else {
-        console.log(response.success);
+        alert(response.success);
+        window.location.href = "../index.html";
       }
     },
     error: function (xhr, status, error) {

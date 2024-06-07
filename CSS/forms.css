@@ -25,6 +25,15 @@ body {
   gap: 1.5rem;
 }
 
+#container {
+  background-color: yellow;
+}
+
+header {
+  width: 100%;
+  background-color: red;
+}
+
 h1 {
   margin: 0;
   padding: 0;
