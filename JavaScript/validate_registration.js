@@ -26,13 +26,18 @@ function validateRegistration() {
 
   $.ajax({
     type: "POST",
-    url: "PHP/process_registration.php",
-    data: $("#registrationForm").serialize(),
+    url: "../PHP/process_registration.php",
+    contentType: "application/json",
+    data: JSON.stringify({ name: name, email: email, password: password }),
     success: function (response) {
-      console.log("Datos de registro enviados correctamente");
+      if (response.error) {
+        console.log("Error:", response.error);
+      } else {
+        console.log(response.success);
+      }
     },
     error: function (xhr, status, error) {
-      console.error("Error al enviar datos de registro: " + error);
+      console.error("Error al enviar los datos de registro: " + error);
     },
   });
 
