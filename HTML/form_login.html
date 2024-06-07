@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Entrar</h1>
+      <form id="loginForm" onsubmit="return validateLogin()">
+        <div>
+          <label for="usuario">Usuario:</label>
+          <input
+            type="text"
+            id="usuario"
+            name="usuario"
+            required
+            pattern="[a-zA-Z0-9]+"
+            title="El usuario debe contener solo letras y números"
+          />
+        </div>
+        <div>
+          <label for="contrasena">Contraseña:</label>
+          <input
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            required
+            pattern=".{8,}"
+            title="La contraseña debe tener al menos 8 caracteres"
+          />
+        </div>
+        <input
+          type="submit"
+          id="loguearse"
+          name="loguearse"
+          value="Loguearse"
+        />
+        <a href="../HTML/form_register.html">👉 Registrarse</a>
+      </form>
+    </div>
+    <script src="../JavaScript/form_validation.js"></script>
+  </body>
+</html>

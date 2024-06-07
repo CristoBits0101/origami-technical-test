@@ -43,6 +43,8 @@ if (isset($_SESSION['session_activa']))
             <button id="downloadPDF">Download PDF</button>
             <button id="downloadJSON">Download JSON</button>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/konva@8.3.6/konva.min.js"></script>
+        <script src="script.js"></script>
     </div>
 
 </body>

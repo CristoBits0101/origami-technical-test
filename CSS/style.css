@@ -1,0 +1,48 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #283347;
+}
+
+.container {
+  width: min-content;
+  margin: 1.5rem auto;
+  background-color: #dfe7f2;
+  padding: 3rem;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  width: min-content;
+  padding: 0.5rem 0.75rem;
+}
+
+a {
+  text-decoration: none;
+}

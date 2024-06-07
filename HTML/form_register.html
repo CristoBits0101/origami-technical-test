@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registro</h1>
+      <form id="registrationForm" onsubmit="return validateRegistration()">
+        <div>
+          <label for="name">Nombre:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="3"
+            maxlength="20"
+            size="20"
+          />
+        </div>
+        <div>
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            pattern=".+@.+\..+"
+            size="20"
+            required
+          />
+        </div>
+        <div>
+          <label for="password">Contraseña:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            maxlength="30"
+            size="20"
+            required
+          />
+        </div>
+        <input
+          type="submit"
+          id="register"
+          name="register"
+          value="Registrarse"
+        />
+        <a href="../HTML/form_login.html">👉 Loguearse</a>
+      </form>
+    </div>
+    <script src="../JavaScript/form_validation.js"></script>
+  </body>
+</html>
