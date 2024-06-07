@@ -1,33 +1,5 @@
 <?php
 
-// 1.1. Importación de configuraciones.
-require_once "./configuration.php";
-
-// 1.2. Como no se puede imprimir los errores antes de redireccionar los envío mediante la variable de sesión.
-session_start();
-
-// 1.3. Registra que formulario enviado contiene errores en los campos.
-$_error = '';
-
-// 1.4. Registra que campos del formulario enviado contiene errores.
-$_SESSION['error_messages'] = array();
-
-// 2.1. Válida el formulario de inicio de sesión.
-if (isset($_POST['login']) && $_POST['login'] == 'Entrar')
-    foreach ($_REQUEST as $field => $value)
-        if (!isset($value) || empty($value)) {
-            $_error = 'login';
-            $_SESSION['error_messages'][$field] = "Error en el campo $field no almacenado";
-        }
-
-        // 2.2. Válida el formulario registro.
-        elseif (isset($_POST['register']) && $_POST['register'] == 'Registrarse')
-            foreach ($_REQUEST as $field => $value)
-                if (!isset($value) || empty($value)) {
-                    $_error = 'register';
-                    $_SESSION['error_messages'][$field] = "Error en el campo $field no almacenado";
-                }
-
 // 3.1. Se redirecciona al formulario con errores para que vuelva a rellenarlo.
 if (!empty($_SESSION['error_messages'])) {
     if ($_error === 'login') {

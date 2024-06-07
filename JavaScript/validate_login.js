@@ -9,7 +9,7 @@ function validateLogin() {
 
   $.ajax({
     type: "POST",
-    url: "form_processor",
+    url: "PHP/process_login.php",
     data: $("#loginForm").serialize(),
     success: function (response) {
       console.log("Datos de registro enviados correctamente");

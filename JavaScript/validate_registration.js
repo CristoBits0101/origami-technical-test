@@ -26,7 +26,7 @@ function validateRegistration() {
 
   $.ajax({
     type: "POST",
-    url: "form_processor",
+    url: "PHP/process_registration.php",
     data: $("#registrationForm").serialize(),
     success: function (response) {
       console.log("Datos de registro enviados correctamente");
