@@ -38,15 +38,3 @@ function validateRegistration() {
 
   return false;
 }
-
-function validateLogin() {
-  let usuario = document.getElementById("usuario").value.trim();
-  let contrasena = document.getElementById("contrasena").value.trim();
-
-  if (usuario.length === 0 || contrasena.length === 0) {
-    alert("Por favor, complete todos los campos.");
-    return false;
-  }
-
-  return true;
-}
