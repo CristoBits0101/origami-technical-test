@@ -1,14 +1,23 @@
-function cerrarSesion()
-{
-// Destruye todas las variables de sesión.
-session_unset();
+<?php
 
-// Destruye la sesión.
-session_destroy();
+header('Content-Type: application/json');
+$response = array();
 
-// Puedes redirigir al usuario a la página de inicio de sesión o a cualquier otra página aquí.
+try {
+
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    if (isset($data['logOut']) && $data['logOut'] === true) {
+        session_start();
+        session_unset();
+        session_destroy();
+        $response['success'] = "Sesión destruida exitosamente";
+    }
+
+} catch (Exception $e) {
+    http_response_code(500);
+    $response['error'] = "Error al destruir la sesión: " . $e->getMessage();
 }
 
-<button onclick="cerrarSesion()">
-    Cerrar Sesión
-</button>
+echo json_encode($response);
+exit();
