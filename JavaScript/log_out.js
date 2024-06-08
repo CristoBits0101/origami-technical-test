@@ -1,7 +1,7 @@
 function logOut() {
   $.ajax({
     type: "POST",
-    url: "../PHP/log_out.php",
+    url: "http://localhost/origami-technical-test/PHP/log_out.php",
     contentType: "application/json",
     data: JSON.stringify({ logOut: true }),
     success: function (response) {
@@ -9,7 +9,7 @@ function logOut() {
         alert("Error: " + response.error);
       } else {
         alert(response.success);
-        window.location.href = "../HTML/form_login.html";
+        window.location.href = "http://localhost/origami-technical-test/HTML/form_login.html";
       }
     },
     error: function (xhr, status, error) {
