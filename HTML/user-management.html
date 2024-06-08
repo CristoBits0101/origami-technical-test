@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión de usuarios</title>
-    <link rel="stylesheet" href="./CSS/index.css" />
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="./JavaScript/check_session.js"></script>
   </head>
   <body>
     <header>
-      <h2>Prueba Técnica de Origami (Gestión de usuarios)</h2>
+      <h2>Prueba Técnica de Origami (Gestión de Usuarios)</h2>
+      <nav>
+        <ul>
+          <li><a class="btn" href="../index.html">🏡 Página principal</a></li>
+          <li>
+            <a class="btn" href="user-management.html"
+              >👤 Gestión de usuarios</a
+            >
+          </li>
+        </ul>
+      </nav>
       <button class="btn" onclick="logOut()">Cerrar Sesión</button>
     </header>
-    <main>
-      <div id="serializing-users"></div>
-    </main>
+    <aside></aside>
+    <main></main>
     <footer><h1>Cristo Rubén Pérez Suárez</h1></footer>
     <script src="./JavaScript/log_out.js"></script>
-    <script src="../JavaScript/validate_registration.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>

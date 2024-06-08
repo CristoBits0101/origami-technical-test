@@ -100,8 +100,9 @@ li {
   color: #f4f7fc;
 }
 
-ul li a {
+header nav ul li a {
   color: #f4f7fc;
+  text-decoration: none;
 }
 
 .btn {

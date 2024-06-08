@@ -17,7 +17,6 @@ try {
         } else {
             $response['error'] = "No se proporcionaron datos válidos para cerrar la sesión";
         }
-
     } else {
         $response['error'] = "Método de solicitud no permitido. Se espera una solicitud POST";
         http_response_code(405);

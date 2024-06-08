@@ -41,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $connection = null;
-    
 } else {
     $response['error'] = "Método de solicitud no permitido.";
     session_unset();

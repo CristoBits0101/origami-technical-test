@@ -11,5 +11,6 @@ function getCookie(name) {
 }
 
 if (!getCookie("PHPSESSID")) {
-  window.location.href ="http://localhost/origami-technical-test/HTML/form_login.html";
+  window.location.href =
+    "http://localhost/origami-technical-test/HTML/form_login.html";
 }

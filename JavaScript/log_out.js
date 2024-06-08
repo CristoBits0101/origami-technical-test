@@ -9,7 +9,8 @@ function logOut() {
         alert("Error: " + response.error);
       } else {
         alert(response.success);
-        window.location.href = "http://localhost/origami-technical-test/HTML/form_login.html";
+        window.location.href =
+          "http://localhost/origami-technical-test/HTML/form_login.html";
       }
     },
     error: function (xhr, status, error) {
