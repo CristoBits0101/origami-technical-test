@@ -30,11 +30,24 @@
   gap: 1.5rem;
 }
 
+.container2 {
+  width: min-content;
+  background-color: #dfe7f2;
+  margin: 5rem auto;
+  padding: 3rem;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 #container {
   background-color: yellow;
 }
 
-h1 {
+.container h1,
+.container2 h1,
+#container {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
@@ -85,7 +98,13 @@ li {
   color: #f4f7fc;
 }
 
+header h2 {
+  font-size: 1.5rem;
+  color: #f4f7fc;
+}
+
 header nav ul li a {
+  font-size: 1.2rem;
   color: #f4f7fc;
   text-decoration: none;
 }
@@ -93,4 +112,8 @@ header nav ul li a {
 .btn {
   padding: 0.5rem 0.75rem;
   cursor: pointer;
+}
+
+input {
+  padding: 0.5rem 0.75rem;
 }

@@ -101,6 +101,7 @@ li {
 }
 
 header nav ul li a {
+  font-size: 1.2rem;
   color: #f4f7fc;
   text-decoration: none;
 }

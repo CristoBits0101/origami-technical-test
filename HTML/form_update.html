@@ -28,9 +28,9 @@
       </nav>
       <button class="btn" onclick="logOut()">Cerrar Sesión</button>
     </header>
-    <div class="container">
+    <div class="container2">
       <h1>Actualizar usuario</h1>
-      <form id="updateForm" onsubmit="return validateUpdate()">
+      <form id="updateForm" onsubmit="return updateUser()">
         <div>
           <label for="name">Nombre:</label>
           <input
@@ -54,11 +54,13 @@
             required
           />
         </div>
+        <input type="hidden" id="userId" name="userId" value="" />
         <input type="submit" id="update" name="update" value="Actualizar" />
       </form>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../JavaScript/validate_update.js"></script>
+    <script src="../JavaScript/log_out.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       function getUrlParams() {
         var params = {};
@@ -72,12 +74,11 @@
         return params;
       }
       var params = getUrlParams();
-      if (params.name && params.email) {
+      if (params.id && params.name && params.email) {
         document.getElementById("name").value = params.name;
         document.getElementById("email").value = params.email;
+        document.getElementById("userId").value = params.id;
       }
     </script>
-    <script src="../JavaScript/log_out.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>>
   </body>
 </html>
