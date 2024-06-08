@@ -8,11 +8,16 @@
   color: #283347;
 }
 
-body {
+.body {
   width: 100%;
   height: 100vh;
   display: grid;
   place-content: center;
+}
+
+#body {
+  width: 100%;
+  height: 100vh;
 }
 
 .container {
@@ -27,11 +32,6 @@ body {
 
 #container {
   background-color: yellow;
-}
-
-header {
-  width: 100%;
-  background-color: red;
 }
 
 h1 {
@@ -62,4 +62,35 @@ input[type="submit"] {
 
 a {
   text-decoration: none;
+}
+
+header {
+  width: 100%;
+  grid-area: header;
+  background-color: #8fa4c3;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  color: #f4f7fc;
+}
+
+header nav ul li a {
+  color: #f4f7fc;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
 }
