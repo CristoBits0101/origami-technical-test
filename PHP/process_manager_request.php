@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $data['email'];
     $password = $data['password'];
 
-    $stmt = $connection->prepare("SELECT id FROM users WHERE user_email = :email");
+    $stmt = $connection->prepare("SELECT id, user_name, user_email FROM users WHERE user_email = :email");
     $stmt->bindParam(':email', $email);
     $stmt->execute();
 
@@ -40,6 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt->execute()) {
             $response['success'] = "Usuario registrado exitosamente.";
+            $stmt = $connection->prepare("SELECT id, user_name, user_email FROM users");
+            $stmt->execute();
+            $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $response['users'] = $users;
         } else {
             $response['error'] = "Error al registrar el usuario.";
         }

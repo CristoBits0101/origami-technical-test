@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestión de Usuarios</title>
-    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="stylesheet" href="../CSS/management.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,10 +28,58 @@
       </nav>
       <button class="btn" onclick="logOut()">Cerrar Sesión</button>
     </header>
-    <aside></aside>
+    <aside>
+      <h2>Crear nuevo usuario</h2>
+      <form id="registrationForm" onsubmit="return validateRegistrationManagement()">
+        <div>
+          <label for="name">Nombre:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="3"
+            maxlength="20"
+            size="20"
+          />
+        </div>
+        <div>
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            pattern=".+@.+\..+"
+            size="20"
+            required
+          />
+        </div>
+        <div>
+          <label for="password">Contraseña:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            maxlength="30"
+            size="20"
+            required
+          />
+        </div>
+        <input
+          type="submit"
+          id="register"
+          name="register"
+          value="Crear usuario"
+        />
+      </form>
+    </aside>
     <main></main>
     <footer><h1>Cristo Rubén Pérez Suárez</h1></footer>
     <script src="../JavaScript/log_out.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../JavaScript/validate_registration.js"></script>
+    <script src="../JavaScript/validate_delete.js"></script>
+    <script src="../JavaScript/serialize_users.js"></script>
   </body>
 </html>
