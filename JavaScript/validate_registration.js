@@ -74,7 +74,7 @@ function validateRegistrationManagement() {
 
   $.ajax({
     type: "POST",
-    url: "../PHP/process_manager_request.php",
+    url: "../PHP/process_manager_registration.php",
     contentType: "application/json",
     data: JSON.stringify({ name: name, email: email, password: password }),
     success: function (response) {

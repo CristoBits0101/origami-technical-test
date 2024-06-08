@@ -30,7 +30,7 @@ $(document).ready(function () {
                 "'>Actualizar</a></td>"
             );
             row.append(
-              "<td><button class='deleteButton' onclick='validateDelete(" +
+              "<td><button class='deleteButton' onclick='deleteUser(" +
                 user.id +
                 ")'>Eliminar</button></td>"
             );
