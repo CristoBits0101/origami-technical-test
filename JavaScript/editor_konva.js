@@ -9,40 +9,45 @@ document.addEventListener("DOMContentLoaded", () => {
   stage.add(layer);
 
   const addTextButton = document.getElementById("addText");
-  if (addTextButton) {
+  const textInput = document.getElementById("textInput");
+  const fontWeightSelect = document.getElementById("fontWeightSelect");
+
+  if (addTextButton && textInput && fontWeightSelect) {
     addTextButton.addEventListener("click", () => {
-      const textNode = new Konva.Text({
-        text: "Sample Text",
-        x: 50,
-        y: 80,
-        draggable: true,
-        fontSize: 20,
-        fontFamily: "Calibri",
-        fill: "black",
-        fontWeight: "normal", // Cambiado de fontStyle a fontWeight
-      });
-
-      textNode.on("dblclick", () => {
-        textNode.fontWeight(
-          textNode.fontWeight() === "bold" ? "normal" : "bold"
-        ); // Cambiado de fontStyle a fontWeight
+      const text = textInput.value;
+      const fontWeight = fontWeightSelect.value;
+      if (text.trim() !== "") {
+        const textNode = new Konva.Text({
+          text: text,
+          x: 50,
+          y: 80,
+          draggable: true,
+          fontSize: 20,
+          fontFamily: "Calibri",
+          fill: "black",
+          fontWeight: fontWeight,
+        });
+        layer.add(textNode);
         layer.draw();
-      });
-
-      layer.add(textNode);
-      layer.draw();
+      }
     });
   } else {
-    console.error("Elemento con ID 'addText' no encontrado.");
+    console.error(
+      "Elementos con IDs 'addText', 'textInput' o 'fontWeightSelect' no encontrados."
+    );
   }
 
   const downloadPDFButton = document.getElementById("downloadPDF");
   if (downloadPDFButton) {
     downloadPDFButton.addEventListener("click", () => {
-      const dataURL = stage.toDataURL();
+      const pdfCanvas = document.createElement("canvas");
+      pdfCanvas.width = stage.width();
+      pdfCanvas.height = stage.height();
+      layer.draw();
+      const dataURL = pdfCanvas.toDataURL("image/png");
       const link = document.createElement("a");
       link.href = dataURL;
-      link.download = "page.pdf";
+      link.download = "konva_canvas.pdf";
       link.click();
     });
   } else {
