@@ -3,26 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Editor KonvaJS</title>
+    <title>Gestión de usuarios</title>
     <link rel="stylesheet" href="./CSS/index.css" />
     <script src="./JavaScript/check_session.js"></script>
   </head>
   <body>
     <header>
-        <h2>Prueba Técnica de Origami (Editor KonvaJS)</h2>
+      <h2>Prueba Técnica de Origami (Gestión de usuarios)</h2>
       <button class="btn" onclick="logOut()">Cerrar Sesión</button>
     </header>
-    <aside>
-      <button class="btn" id="addText">Agregar Texto</button>
-      <button class="btn" id="downloadPDF">Descargar PDF</button>
-      <button class="btn" id="downloadJSON">Descargar JSON</button>
-    </aside>
     <main>
-      <div id="konva-holder"></div>
+      <div id="serializing-users"></div>
     </main>
     <footer><h1>Cristo Rubén Pérez Suárez</h1></footer>
     <script src="./JavaScript/log_out.js"></script>
-    <script src="https://unpkg.com/konva@9/konva.min.js"></script>
+    <script src="../JavaScript/validate_registration.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
